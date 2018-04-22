@@ -1,0 +1,54 @@
+buildscript {
+    ext {
+        _buildToolsVersion = '27.0.3'
+        _compileSdkVersion = 27
+        objectboxVersion = '1.5.0'
+    }
+
+    repositories {
+        mavenCentral()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+        jcenter()
+        google()
+    }
+
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.1.1'
+        classpath "io.objectbox:objectbox-gradle-plugin:$objectboxVersion"
+    }
+}
+
+allprojects {
+    repositories {
+        mavenCentral()
+        jcenter()
+        google()
+        maven {
+            url 'https://maven.google.com/'
+            name 'Google'
+        }
+    }
+    task zipAll(type: Zip) {
+        baseName "objectbox-examples"
+        from(rootDir) {
+            exclude '**/.idea/**'
+            exclude '**/build/**'
+            exclude '.gradle/**'
+            exclude '**/*.iml'
+            exclude '**/*.dll'
+            exclude '**/*.so'
+            exclude '**/local.properties'
+        }
+
+        destinationDir buildDir
+    }
+
+    task wrapper(type: Wrapper) {
+        group 'build setup'
+        gradleVersion '4.5.1'
+        distributionType Wrapper.DistributionType.ALL
+    }
+}

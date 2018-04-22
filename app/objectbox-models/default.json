@@ -1,0 +1,54 @@
+{
+  "_note1": "KEEP THIS FILE! Check it into a version control system (VCS) like git.",
+  "_note2": "ObjectBox manages crucial IDs for your object model. See docs for details.",
+  "_note3": "If you have VCS merge conflicts, you must resolve them according to ObjectBox docs.",
+  "entities": [
+    {
+      "id": "1:8854333430629531103",
+      "lastPropertyId": "7:6547766952445721596",
+      "name": "GiphyOBox",
+      "properties": [
+        {
+          "id": "1:4291084783195151774",
+          "name": "Ids"
+        },
+        {
+          "id": "2:8342686497133356650",
+          "name": "id"
+        },
+        {
+          "id": "3:2898745899297278729",
+          "name": "gifURl"
+        },
+        {
+          "id": "4:199165678965876204",
+          "name": "videoURl"
+        },
+        {
+          "id": "5:4852979256947849532",
+          "name": "thumbs"
+        },
+        {
+          "id": "6:6881838750201077062",
+          "name": "upvotes"
+        },
+        {
+          "id": "7:6547766952445721596",
+          "name": "downvotes"
+        }
+      ],
+      "relations": []
+    }
+  ],
+  "lastEntityId": "1:8854333430629531103",
+  "lastIndexId": "0:0",
+  "lastRelationId": "0:0",
+  "lastSequenceId": "0:0",
+  "modelVersion": 4,
+  "modelVersionParserMinimum": 4,
+  "retiredEntityUids": [],
+  "retiredIndexUids": [],
+  "retiredPropertyUids": [],
+  "retiredRelationUids": [],
+  "version": 1
+}
